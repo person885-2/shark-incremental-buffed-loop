@@ -366,6 +366,23 @@ const AUTOMATION = {
             OMNI.enterGod()
         },
     },
+    omni_research: {
+        unl: ()=>player.omni.active&&REBIRTH.hasUpgrade(4),
+        interval: [0.033,0.9],
+
+        cost: x=>Decimal.pow(10,x+1),
+        bulk: x=>x.log(10).floor(),
+
+        curr: "hadron",
+
+        trigger() {
+            for (let i of POST_OMNI_RESEARCH) {
+                let r = RESEARCH[i], max = r.max??1
+
+                purchaseResearch(i, !r.noBuyMax && max > 1)
+            }
+        },
+    },
 }
 
 for (let [i,x] of Object.entries(AUTOMATION)) {
