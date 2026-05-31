@@ -338,7 +338,7 @@ const AUTOMATION = {
     },
     hadron_research: {
         unl: ()=>!player.omni.active&&REBIRTH.hasUpgrade(2),
-        interval: [1,0.9],
+        interval: [0.033,0.9],
 
         cost: x=>Decimal.pow(10,x+1),
         bulk: x=>x.log(10).floor(),
