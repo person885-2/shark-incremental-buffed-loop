@@ -109,10 +109,10 @@ const REBIRTH = {
         () => {
             unlockAutomations(['osu','ostu','ue','nucleus'])
         },
+        null,
         () => {
             player.hadron.starter_upgs.push(i)
         },
-        null,
         null,
         null,
         null,
