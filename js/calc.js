@@ -96,7 +96,7 @@ function calc(dt) {
         
                 if (player.explore.active > -1) player.explore.best_fish = player.explore.best_fish.max(player.fish)
         
-                var auto_e = player.research.e3.toNumber() + (hasResearch('e5') ? 1 : 0)
+                var auto_e = REBIRTH.hasUpgrade(5) ? 5 :  player.research.e3.toNumber() + (hasResearch('e5') ? 1 : 0)
                 var research_e6 = hasResearch('e6')
         
                 for (let i in EXPLORE) {
