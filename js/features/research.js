@@ -1035,6 +1035,7 @@ RESEARCH_KEYS.forEach(x => RESEARCH[x].tier ??= 1)
 const PRE_BH_RESEARCH = RESEARCH_KEYS.filter(x => RESEARCH[x].tier < 2)
 const PRE_HADRON_RESEARCH = RESEARCH_KEYS.filter(x => RESEARCH[x].tier < 3)
 const PRE_OMNI_RESEARCH = RESEARCH_KEYS.filter(x => RESEARCH[x].tier < 4)
+const POST_OMNI_RESEARCH = RESEARCH_KEYS.filter(x => RESEARCH[x].tier > 3)
 
 PRE_OMNI_RESEARCH.forEach(x => {
     const U = RESEARCH[x].unl ?? (() => true)
