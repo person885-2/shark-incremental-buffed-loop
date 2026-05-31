@@ -1488,6 +1488,7 @@ LANGUAGES.EN = {
         'auto-nucleobase-name': `Auto-Nucleobases`,
         'auto-gal_eu-name': `Auto-Galactic Exploration Upgrade`,
         'auto-hadron_research-name': `Auto-Hadronize Research`,
+        'auto-overmodify-name': `Auto-Overmodification`,
 
         'auto-cost': (D,cost,name) => `Decrease Interval by ${formatReduction(D,0)}.<br>Cost: ${format(cost,0)} ${name}`,
         'auto-interval': (a,b,maxed) => `Interval: ${format(a,3)}s`+(maxed ? "" :` ➜ ${format(b,3)}s`),
