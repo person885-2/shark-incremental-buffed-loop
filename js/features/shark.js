@@ -544,8 +544,8 @@ function updateSharkTemp() {
 
     tmp.su_locked = l
 
-    tmp.su_el.fish = hasResearch('p2')
-    tmp.su_el.prestige = hasDepthMilestone(1,2)
+    tmp.su_el.fish = hasResearch('p2')||REBIRTH.hasUpgrade(0)
+    tmp.su_el.prestige = hasDepthMilestone(1,2)||REBIRTH.hasUpgrade(0)
 
     if (hasForgeUpgrade('auto')) {
         tmp.su_el.stone = true
@@ -678,7 +678,7 @@ function upgradeShark(auto) {
             bulk = SHARK.bulk()
             cost = SHARK.cost(bulk.sub(1))
         }
-        if (!hasDepthMilestone(0,2)) player.fish = player.fish.sub(cost).max()
+        if (!hasDepthMilestone(0,2)&&!REBIRTH.hasUpgrade(0)) player.fish = player.fish.sub(cost).max()
         player.shark_level = preventNaNDecimal(bulk)
     }
 }
