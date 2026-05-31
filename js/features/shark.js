@@ -560,8 +560,8 @@ function updateSharkTemp() {
         tmp.su_el.berkelium = true
         tmp.su_el.californium = true
     }
-    if (player.omni.tier.gte(9)) tmp.su_el['anti-fish'] = true;
-    if (player.omni.tier.gte(19)) tmp.su_el['transcend'] = true;
+    if (player.omni.tier.gte(9)||REBIRTH.hasUpgrade(3)) tmp.su_el['anti-fish'] = true;
+    if (player.omni.tier.gte(19)||REBIRTH.hasUpgrade(3)) tmp.su_el['transcend'] = true;
 
     for (let [i,v] of Object.entries(SHARK_UPGRADES)) {
         var lvl = player.shark_upg[i]
