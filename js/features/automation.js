@@ -336,6 +336,23 @@ const AUTOMATION = {
             for (let i = 0; i < DECAY_CHAIN.length; i++) purchaseDecaySeries(i, true);
         },
     },
+    hadron_research: {
+        unl: ()=>!player.omni.active&&REBIRTH.hasUpgrade(2),
+        interval: [1,0.9],
+
+        cost: x=>Decimal.pow(10,x+1),
+        bulk: x=>x.log(10).floor(),
+
+        curr: "hadron",
+
+        trigger() {
+            for (let i of PRE_OMNI_RESEARCH) {
+                let r = RESEARCH[i], max = r.max??1
+
+                purchaseResearch(i, !r.noBuyMax && max > 1)
+            }
+        },
+    },
 }
 
 for (let [i,x] of Object.entries(AUTOMATION)) {
