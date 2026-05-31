@@ -283,6 +283,7 @@ function updateEvolutionTreeTemp() {
     if (player.feature>=12) tmp.evo_tree_rows++
     if (player.feature>=13) tmp.evo_tree_rows++
     if (player.feature>=14) tmp.evo_tree_rows++
+    REBIRTH.hasUpgrade(1) ? tmp.evo_tree_rows = 12
 
     tmp.total_faith = E(0)
     for (let i = 0; i < player.humanoid.faith.length; i++) {
