@@ -353,6 +353,19 @@ const AUTOMATION = {
             }
         },
     },
+    overmodify: {
+        unl: ()=>player.omni.god&&REBIRTH.hasUpgrade(3),
+        interval: [0.033,0.9],
+
+        cost: x=>Decimal.pow(3,x).mul(1e3),
+        bulk: x=>x.div(1e3).log(3).floor().add(1),
+
+        curr: "prestige",
+
+        trigger() {
+            OMNI.enterGod()
+        },
+    },
 }
 
 for (let [i,x] of Object.entries(AUTOMATION)) {
