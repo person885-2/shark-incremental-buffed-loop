@@ -101,7 +101,7 @@ const REBIRTH = {
             unlockAutomations(['shark','su','spu','eu','core_reactor','core_radiation','radioactive_boosts','research'])
         },
         () => {
-            unlockAutomations(['mining_upgs','humanoid','mining_tier','faith','evolution_tree','mining_ascend','remnant','sing_research','rocket_part'])
+            unlockAutomations(['mining_upgs','humanoid','mining_tier','faith','evolution_tree','mining_ascend','remnant','sing_research','rocket_part', 'hadron_research'])
         },
         () => {
             unlockAutomations(['nucleobase','gal_eu'])
