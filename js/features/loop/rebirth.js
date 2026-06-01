@@ -113,7 +113,9 @@ const REBIRTH = {
         () => {
             player.hadron.starter_upgs.push(i)
         },
-        player.singularity.bh = E(8),
+        () => {
+            player.singularity.bh = E(8)
+        },
         null,
         null,
         null,
