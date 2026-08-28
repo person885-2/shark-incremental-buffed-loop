@@ -89,7 +89,7 @@ const REBIRTH = {
         x = (y.base = player.rebirth.total.add(1)).mul(x)
         x = (y.time = Decimal.div(86400, player.rebirth.best).sqrt().add(.5).max(1)).mul(x)
 
-        if (this.hasUpgrade(9)) x = x.mul(1.5);
+        if (this.hasUpgrade(9)) x = x.mul(1.5 ** player.rebirth.upgrades.length);
 
         y.other = x.div(y.base).div(y.time)
 
