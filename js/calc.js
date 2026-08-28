@@ -239,7 +239,7 @@ function calc(dt) {
                 if (ge.active > -1) ge.best_fish = ge.best_fish.max(player.fish);
         
                 var auto_e = 0
-                if (hasResearch('h16')) auto_e += 6;
+                if (hasResearch('h16')||REBIRTH.hasUpgrade(7)) auto_e += 6;
                 // var research_e6 = hasResearch('e6')
         
                 for (let i in GALACTIC_EXPLORE) {
@@ -248,7 +248,7 @@ function calc(dt) {
                 }
             }
     
-            if (player.feature >= 27 && hasDNAMilestone(8)) player.hadron.dna = player.hadron.dna.max(DNA.length);
+            if (player.feature >= 27 && (hasDNAMilestone(8)||REBIRTH.hasUpgrade(7))) player.hadron.dna = player.hadron.dna.max(DNA.length);
     
             if (REBIRTH.hasUpgrade(1) || hasResearch('h5')) {
                 player.singularity.bh_tier = player.singularity.bh_tier.max(CONSTELLATION.bulk)
