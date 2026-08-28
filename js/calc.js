@@ -131,7 +131,7 @@ function calc(dt) {
             }
     
             if (player.feature >= 13) {
-                if (!player.hadron.starter_upgs.includes(4) && !REBIRTH.hasUpgrade(6)) {
+                if (!player.hadron.starter_upgs.includes(4)) {
                     if (OA) {
                         var ms = tmp.mining_speed, md = tmp.mining_damage, mf = tmp.mining_fortune, hb = tmp.mining_tier_bonus[0]
         
