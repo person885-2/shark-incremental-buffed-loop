@@ -117,7 +117,7 @@ const MINING_TIER = {
         var x = [1,1]
 
         if (t.gte(1)) {
-            if (!player.hadron.starter_upgs.includes(4) && !REBIRTH.hasUpgrade(6)) x[0] = Decimal.pow(4,player.singularity.best_bh.gte(5)?t:t.scale(20,hasResearch("f8") ? 1.8 : 2,'P'));
+            if (!player.hadron.starter_upgs.includes(4)) x[0] = Decimal.pow(4,player.singularity.best_bh.gte(5)?t:t.scale(20,hasResearch("f8") ? 1.8 : 2,'P'));
             x[1] = Decimal.pow(5,t_m4)
         }
 
@@ -216,7 +216,7 @@ var ores_grid = []
 var mine_time = E(0)
 
 function reloadOres() {
-    if (player.hadron.starter_upgs.includes(4) || ores_grid.length >= 8 || REBIRTH.hasUpgrade(6)) return
+    if (player.hadron.starter_upgs.includes(4) || ores_grid.length >= 8) return
 
     var mf = tmp.mining_fortune.div(100)
     var smf = tmp.super_mining_fortune.div(100)
@@ -279,7 +279,7 @@ function updateCultivationHTML() {
         luck: icon('luck'),
         heart: icon('heart'),
     }
-    var hu4 = player.hadron.starter_upgs.includes(4) || REBIRTH.hasUpgrade(6)
+    var hu4 = player.hadron.starter_upgs.includes(4)
 
     var ascend = player.humanoid.mining_ascend
 
