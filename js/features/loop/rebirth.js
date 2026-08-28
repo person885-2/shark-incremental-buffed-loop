@@ -110,13 +110,11 @@ const REBIRTH = {
             unlockAutomations(['osu','ostu','ue','nucleus'])
         },
         null,
-        () => {
-            player.hadron.starter_upgs.push(i)
-        },
+        null,
+        null,
         () => {
             player.singularity.bh = E(8)
         },
-        null,
         null,
         null,
     ],
