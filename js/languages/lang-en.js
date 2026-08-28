@@ -1448,7 +1448,7 @@ LANGUAGES.EN = {
             ["Antimatter Automation I", `Unlock the ${toTextStyle('Omnipotence','omni')}-related automations permanently, unlock the overmodification autobuyer, and ${toTextStyle('Shark','shark')} upgrades have no cost`],
             ["Antimatter Automation II", `Automatically update ${toTextStyle('Omnipotence','omni')} tier without reset required, and unlock the omnipotence research autobuyer.`],
             ["The Classic Generation", `Unlock the ${toTextStyle('Prestige','prestige')} point, ${toTextStyle('Magmatic','core')} fragment, and exploration score generations permanently. `],
-            ["Humanoid Shark Population", `Unlock the ${toTextStyle('Humanoid','humanoid')} shark and cultivation ore generations permanently.`],
+            ["Humanoid Shark Population", `Unlock the ${toTextStyle('Humanoid','humanoid')} shark generation permanently.`],
             ["Self-duplicate Particle", `Unlock the ${toTextStyle('Singularity','black-hole')}-related, Galactic Exploration, DNA, and ${toTextStyle('Fundamental Particle','hadron')} generations permanently, and start with 8 black holes.`],
             ["Antimatter Triad", `Unlock the ${toTextStyle('Omnipotence','omni')}-related generations permanently with a minimum of 100% generation.`],
             ["Extra Multiplier", `Gain <b>*1.5</b> more global multiplier per rebirth upgrade purchased.`],
