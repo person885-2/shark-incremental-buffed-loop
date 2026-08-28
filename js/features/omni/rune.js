@@ -391,7 +391,7 @@ CURRENCIES['rune-fragments'] = {
         return x.floor();
     },
 
-    get passive() { return Decimal.mul(+(REBIRTH.hasUpgrade(8) || player.omni.tier.gte(56)), Decimal.max(getOmniReward(56,0),.01)) },
+    get passive() { return Decimal.mul(+(REBIRTH.hasUpgrade(8) || player.omni.tier.gte(56)), Decimal.max(getOmniReward(56,0),REBIRTH.hasUpgrade(8) ? 1 : .01)) },
 }
 
 RESETS.runeification = {
