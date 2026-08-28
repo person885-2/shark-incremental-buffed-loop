@@ -685,7 +685,7 @@ CURRENCIES.transcend = {
         return x.floor()
     },
 
-    get passive() { return Decimal.mul(+(REBIRTH.hasUpgrade(8) || player.omni.tier.gte(20)), Decimal.max(getOmniReward(20,0),.01)).mul(tmp.speed.div(100).max(1)) },
+    get passive() { return Decimal.mul(+(REBIRTH.hasUpgrade(8) || player.omni.tier.gte(20)), Decimal.max(getOmniReward(20,0),REBIRTH.hasUpgrade(8) ? 1 : .01)).mul(tmp.speed.div(100).max(1)) },
 }
 
 CURRENCIES.nucleus = {
@@ -710,7 +710,7 @@ CURRENCIES.nucleus = {
         return x.floor()
     },
 
-    get passive() { return Decimal.mul(+(REBIRTH.hasUpgrade(8) || player.omni.tier.gte(32)), Decimal.max(getOmniReward(32,0),.01)).mul(tmp.speed.max(1).pow(getOmniReward(36,0.1))) },
+    get passive() { return Decimal.mul(+(REBIRTH.hasUpgrade(8) || player.omni.tier.gte(32)), Decimal.max(getOmniReward(32,0),REBIRTH.hasUpgrade(8) ? 1 : .01)).mul(tmp.speed.max(1).pow(getOmniReward(36,0.1))) },
 }
 
 RESETS.transcend = {
