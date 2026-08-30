@@ -248,7 +248,7 @@ function calc(dt) {
                 }
             }
     
-            if (player.feature >= 27 && (hasDNAMilestone(8)||REBIRTH.hasUpgrade(7))) player.hadron.dna = player.hadron.dna.max(DNA.length);
+            if ((player.feature >= 27 && hasDNAMilestone(8))||REBIRTH.hasUpgrade(7)) player.hadron.dna = player.hadron.dna.max(DNA.length);
     
             if (REBIRTH.hasUpgrade(1) || hasResearch('h5')) {
                 player.singularity.bh_tier = player.singularity.bh_tier.max(CONSTELLATION.bulk)
