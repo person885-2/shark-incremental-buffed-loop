@@ -113,7 +113,9 @@ const REBIRTH = {
         null,
         null,
         () => {
-            player.singularity.bh = E(8)
+            player.singularity.bh = E(8);
+            player.singularity.best_bh = E(8);
+            player.singularity.first = true;
         },
         null,
         null,
