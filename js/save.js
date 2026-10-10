@@ -1,5 +1,5 @@
 const VERSION = 3
-const SAVE_ID2 = "shark_inc_save"
+const SAVE_ID2 = "shark_inc_save2"
 var prevSave = "", autosave
 
 function getPlayerData() {
