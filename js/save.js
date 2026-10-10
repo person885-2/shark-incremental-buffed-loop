@@ -1,5 +1,5 @@
 const VERSION = 3
-const SAVE_ID = "shark_inc_save"
+const SAVE_ID2 = "shark_inc_save"
 var prevSave = "", autosave
 
 function getPlayerData() {
@@ -266,8 +266,8 @@ function save(auto=false) {
     if (auto && !player.radios.autosave) return
     let str = btoa(JSON.stringify(player))
     if (preventSaving() || findNaN(str, true)) return
-    if (localStorage.getItem(SAVE_ID) == '') wipe()
-    localStorage.setItem(SAVE_ID,str)
+    if (localStorage.getItem(SAVE_ID2) == '') wipe()
+    localStorage.setItem(SAVE_ID2,str)
     prevSave = str
     addNotify(lang_text("notify-desc").save)
 }
@@ -335,7 +335,7 @@ function importy_file() {
 				error("Error Importing, because it got NaNed")
 				return
 			}
-            localStorage.setItem(SAVE_ID, loadgame)
+            localStorage.setItem(SAVE_ID2, loadgame)
 			location.reload()
         }
         fr.readAsText(a.files[0]);
